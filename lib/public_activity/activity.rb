@@ -53,6 +53,10 @@ module PublicActivity
       end
     end
     
+    def as_json(options={})
+      {:owner => self.owner, :text => self.text, id: self.id}
+    end
+    
     private
     def resolveTemplate(key)
        res = nil
