@@ -54,7 +54,7 @@ module PublicActivity
     end
     
     def as_json(options={})
-      {:owner => self.owner, :text => self.text, id: self.id}
+      {:owner => self.owner, :text => self.text, :id => self.id}
     end
     
     private
